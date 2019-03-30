@@ -1,0 +1,21 @@
+spring:
+    datasource:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/db_id_gen?useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: test
+      password: test
+      initialSize: 1
+      minIdle: 10
+      maxActive: 10
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 30000
+      validationQuery: select 1
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+    jpa:
+      properties:
+        hibernate:
+          format_sql: true
+          show_sql: true
